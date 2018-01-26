@@ -1,4 +1,4 @@
-{% set version = '1.2-0' %}
+{% set version = '1.2-1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/spacetime_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/spacetime/spacetime_{{ version }}.tar.gz
-  sha256: f0b81114b422a44748571f9cb69b70018e08e77c25f7f3b19a88db89ed5ea9e1
+  sha256: 8f50779fd728cddc3005af7885e56427f58625c8101f9e52a685ed947dcddec4
 
 build:
   number: 0
