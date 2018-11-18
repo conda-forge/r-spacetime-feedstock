@@ -14,9 +14,8 @@ Summary: Classes and methods for spatio-temporal data, including space-time regu
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-spacetime-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-spacetime-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-spacetime-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-spacetime-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-spacetime-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-spacetime-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-spacetime-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-spacetime-feedstock)
 
 Current release info
 ====================
