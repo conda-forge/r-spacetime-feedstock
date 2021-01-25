@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: spacetime_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/spacetime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spacetime/spacetime_{{ version }}.tar.gz
   sha256: 1f1ccc997e6a3fe56b5918915dde416b0096be231dde6c0d05aebe05bac0124e
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,11 +45,12 @@ test:
 
 about:
   home: http://github.com/edzer/spacetime
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Classes and methods for spatio-temporal data, including space-time regular lattices, sparse lattices, irregular data, and trajectories; utility functions for plotting data as map sequences (lattice or animation) or multiple time series; methods for spatial and temporal selection and subsetting, as well as for
     spatial/temporal/spatio-temporal matching or aggregation, retrieving coordinates, print, summary, etc.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
