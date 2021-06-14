@@ -1,4 +1,4 @@
-{% set version = "1.2-4" %}
+{% set version = "1.2-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spacetime_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spacetime/spacetime_{{ version }}.tar.gz
-  sha256: 1f1ccc997e6a3fe56b5918915dde416b0096be231dde6c0d05aebe05bac0124e
+  sha256: 8f2acc3886780a902fb0476d6ab271e6640be1a1af4c7f9a21d8a2882fb72746
 
 build:
   merge_build_host: true  # [win]
