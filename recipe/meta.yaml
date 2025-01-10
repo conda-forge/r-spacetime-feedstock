@@ -12,7 +12,7 @@ source:
   sha256: d6819eb7162b65638a5faad77a102cb8fb5934a5a19d02b6acfbd4e3128cbb05
 
 build:
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -21,6 +21,12 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-intervals                  # [build_platform != target_platform]
+    - r-lattice                    # [build_platform != target_platform]
+    - r-sp >=1.1_0                 # [build_platform != target_platform]
+    - r-xts >=0.8_8                # [build_platform != target_platform]
+    - r-zoo >=1.7_9                # [build_platform != target_platform]
   host:
     - r-base
     - r-intervals
@@ -46,7 +52,6 @@ about:
   license: GPL-2.0-or-later
   summary: Classes and methods for spatio-temporal data, including space-time regular lattices, sparse lattices, irregular data, and trajectories; utility functions for plotting data as map sequences (lattice or animation) or multiple time series; methods for spatial and temporal selection and subsetting, as well as for
     spatial/temporal/spatio-temporal matching or aggregation, retrieving coordinates, print, summary, etc.
-  license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
